@@ -20,9 +20,9 @@ public class Main {
          *    count(0,prob) % 2 == count(0,sol) %2
          */
         int [] prob = new int []{1 ,0, 1, 1, 0};
-        int [] sol = new int[]{1, 1, 0, 1, 0};
+        int [] sol = new int[]{0, 0, 1, 0, 0};
 
-        ProbIA5Board board = new ProbIA5Board(prob, sol );
+        ProbIA5Board board = new ProbIA5Board(prob, sol);
 
         // Create the Problem object
         Problem p = new  Problem(board,
@@ -32,6 +32,7 @@ public class Main {
 
         // Instantiate the search algorithm
         // AStarSearch(new GraphSearch()) or IterativeDeepeningAStarSearch()
+        //Search alg = new IterativeDeepeningAStarSearch();
         Search alg = new AStarSearch(new GraphSearch());
 
         // Instantiate the SearchAgent object
